@@ -100,7 +100,7 @@ export function Hero() {
             custom={0.2}
             className="font-headline text-accent uppercase text-xs md:text-sm tracking-[0.3em]"
           >
-            <span className="inline-block px-6 py-2 border border-accent/30 rounded-full backdrop-blur-sm bg-white/5">
+            <span className="inline-block px-6 py-2 border border-accent/50 rounded-full backdrop-blur-sm bg-black/30 text-accent">
               Nurtured by Nature • Exported with Excellence
             </span>
           </motion.p>

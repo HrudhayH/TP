@@ -71,7 +71,7 @@ export function CTA() {
             <Button size="lg" className="bg-white text-primary hover:bg-accent hover:text-white rounded-full px-16 py-8 text-xl h-auto transition-all duration-500 magnetic-btn shadow-lg shadow-white/10">
               Become a Partner
             </Button>
-            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-full px-16 py-8 text-xl h-auto magnetic-btn">
+            <Button size="lg" variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white hover:text-primary hover:border-white rounded-full px-16 py-8 text-xl h-auto magnetic-btn">
               Contact Sales
             </Button>
           </div>

@@ -5,37 +5,25 @@
 
 @layer base {
   :root {
-    /* Muted olive-green for text and core elements */
     --primary: 75 10% 24%;
     --primary-foreground: 0 0% 100%;
-
-    /* Very light off-white with subtle olive tint */
     --background: 60 4% 97%;
     --foreground: 75 10% 20%;
-
     --card: 60 4% 98%;
     --card-foreground: 75 10% 20%;
-
     --popover: 60 4% 97%;
     --popover-foreground: 75 10% 20%;
-
     --secondary: 75 5% 90%;
     --secondary-foreground: 75 10% 24%;
-
     --muted: 75 5% 92%;
     --muted-foreground: 75 5% 45%;
-
-    /* Desaturated golden-ochre accent */
     --accent: 43 58% 47%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-
     --border: 75 5% 85%;
     --input: 75 5% 85%;
     --ring: 43 58% 47%;
-
     --radius: 0.75rem;
   }
 
@@ -55,11 +43,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground selection:bg-accent/30;
+    @apply bg-background text-foreground selection:bg-accent/30 antialiased overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tight;
+    @apply font-headline tracking-tighter leading-tight;
   }
 }
 
@@ -67,13 +55,34 @@
   scroll-behavior: smooth;
 }
 
-.parallax-bg {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.perspective-1000 {
+  perspective: 1000px;
 }
 
 .glass-morphism {
-  @apply bg-background/70 backdrop-blur-md border border-white/20;
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-bg {
+  height: 120%;
+  top: -10%;
+  position: absolute;
+  width: 100%;
+  will-change: transform;
 }

@@ -3,62 +3,74 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export function FeaturedProduct() {
   const riceImage = PlaceHolderImages.find(img => img.id === "rice-macro");
+  useScrollReveal();
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0.3, 0.6], [0.8, 1]);
+  const y = useTransform(scrollYProgress, [0.3, 0.6], [100, 0]);
 
   return (
-    <section className="py-24 md:py-40 bg-primary text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-32 md:py-64 bg-primary text-white overflow-hidden relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent opacity-50" />
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           
-          <div className="space-y-10 order-2 lg:order-1">
-            <div className="space-y-4">
-              <Badge className="bg-accent/20 text-accent border-accent/30 hover:bg-accent/30 rounded-full px-4 py-1">Featured Product</Badge>
-              <h2 className="font-headline text-5xl md:text-7xl leading-tight">
-                The Gold Standard <br />
-                <span className="italic text-accent">of Basmati</span>
+          <div className="space-y-12 order-2 lg:order-1 reveal-on-scroll">
+            <div className="space-y-6">
+              <Badge className="bg-accent/10 text-accent border-accent/20 hover:bg-accent/20 rounded-full px-6 py-2 text-sm">Iconic Series</Badge>
+              <h2 className="font-headline text-6xl md:text-9xl leading-[0.85] tracking-tighter">
+                The Gold <br />
+                <span className="italic text-accent">Basmati.</span>
               </h2>
             </div>
             
-            <div className="space-y-6 text-lg text-white/80 font-body leading-relaxed">
+            <div className="space-y-8 text-xl md:text-2xl text-white/70 font-body font-light leading-relaxed max-w-xl">
               <p>
-                Grown in the foothills of the Himalayas, our premium Basmati rice is aged to perfection. Each long, slender grain carries a distinctive aroma that transforms a meal into a sensory experience.
+                Hand-harvested in the shadow of the Himalayas, our aged Basmati represents the pinnacle of aromatic perfection.
               </p>
               
-              <div className="grid grid-cols-2 gap-8 pt-4">
-                <div className="space-y-2">
-                  <h4 className="font-headline text-xl text-accent">Purity Assured</h4>
-                  <p className="text-sm">99.9% purity grade with zero additives or artificial coloring.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-12 border-t border-white/10">
+                <div className="space-y-3">
+                  <h4 className="font-headline text-2xl text-accent">99.9% Purity</h4>
+                  <p className="text-sm md:text-base opacity-60">Rigorous selection process for consistent grain length and texture.</p>
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-headline text-xl text-accent">Aromatic Profile</h4>
-                  <p className="text-sm">Natural fragrance that intensifies upon cooking, a hallmark of aged rice.</p>
+                <div className="space-y-3">
+                  <h4 className="font-headline text-2xl text-accent">2-Year Aged</h4>
+                  <p className="text-sm md:text-base opacity-60">Slow-aged in climate-controlled environments for peak fragrance.</p>
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-headline text-xl text-accent">Export Grade</h4>
-                  <p className="text-sm">Meeting stringent quality certifications for USA, Europe, and Middle East.</p>
+                <div className="space-y-3">
+                  <h4 className="font-headline text-2xl text-accent">Global QC</h4>
+                  <p className="text-sm md:text-base opacity-60">Certified for USA, EU, and Gulf standard excellence.</p>
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-headline text-xl text-accent">Sustainable</h4>
-                  <p className="text-sm">Ethically sourced using water-efficient farming techniques.</p>
+                <div className="space-y-3">
+                  <h4 className="font-headline text-2xl text-accent">Fair Trade</h4>
+                  <p className="text-sm md:text-base opacity-60">Direct-from-farm partnerships ensuring community prosperity.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative aspect-[4/5] md:aspect-square order-1 lg:order-2 rounded-[2rem] overflow-hidden group">
+          <motion.div 
+            style={{ scale, y }}
+            className="relative aspect-[3/4] md:aspect-square order-1 lg:order-2 rounded-[3rem] overflow-hidden shadow-2xl group"
+          >
             <Image
               src={riceImage?.imageUrl || ""}
               alt="Macro rice grains"
               fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="object-cover transition-transform duration-[20s] group-hover:scale-125"
               data-ai-hint={riceImage?.imageHint}
             />
-            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
-          </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[3rem]" />
+          </motion.div>
 
         </div>
       </div>

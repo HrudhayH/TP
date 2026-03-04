@@ -6,6 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,7 +14,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -22,45 +23,73 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4 md:px-12",
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-6 py-6 md:px-12",
+        isScrolled ? "py-4" : "py-8"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="font-headline text-2xl tracking-tighter text-primary">
-          VRIKSA<span className="text-accent">.</span>
+      <div className={cn(
+        "max-w-7xl mx-auto flex items-center justify-between transition-all duration-700 px-6 py-3 rounded-full",
+        isScrolled ? "glass-morphism" : "bg-transparent"
+      )}>
+        <Link href="/" className="font-headline text-3xl tracking-tighter text-primary group">
+          VRIKSA<span className="text-accent group-hover:opacity-50 transition-opacity">.</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-10">
-          <Link href="#products" className="text-sm font-medium hover:text-accent transition-colors">Products</Link>
-          <Link href="#about" className="text-sm font-medium hover:text-accent transition-colors">About</Link>
-          <Link href="#export" className="text-sm font-medium hover:text-accent transition-colors">Global Export</Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-accent transition-colors">Contact</Link>
-          <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white rounded-full px-6 transition-all">
+        <div className="hidden md:flex items-center space-x-12">
+          {["Products", "About", "Global Export", "Contact"].map((item) => (
+            <Link 
+              key={item}
+              href={`#${item.toLowerCase().replace(' ', '-')}`} 
+              className={cn(
+                "text-sm uppercase tracking-widest font-medium hover:text-accent transition-all relative group",
+                isScrolled ? "text-primary" : "text-white"
+              )}
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all group-hover:w-full" />
+            </Link>
+          ))}
+          <Button variant="outline" className={cn(
+            "rounded-full px-8 transition-all border-accent text-accent hover:bg-accent hover:text-white",
+            !isScrolled && "border-white/40 text-white hover:bg-white hover:text-primary hover:border-white"
+          )}>
             Inquire Now
           </Button>
         </div>
 
         {/* Mobile Nav Toggle */}
         <button 
-          className="md:hidden text-primary"
+          className={cn("md:hidden transition-colors", isScrolled ? "text-primary" : "text-white")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-background border-b border-border p-6 flex flex-col space-y-4 md:hidden animate-in fade-in slide-in-from-top-4">
-          <Link href="#products" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-headline">Products</Link>
-          <Link href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-headline">About</Link>
-          <Link href="#export" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-headline">Global Export</Link>
-          <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-headline">Contact</Link>
-          <Button className="bg-accent text-white w-full">Inquire Now</Button>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-6 right-6 mt-4 glass-morphism rounded-[2rem] p-8 flex flex-col space-y-6 md:hidden shadow-2xl"
+          >
+            {["Products", "About", "Global Export", "Contact"].map((item) => (
+              <Link 
+                key={item}
+                href={`#${item.toLowerCase().replace(' ', '-')}`} 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="text-2xl font-headline text-primary border-b border-primary/5 pb-2"
+              >
+                {item}
+              </Link>
+            ))}
+            <Button className="bg-accent text-white w-full rounded-full py-6 text-lg">Inquire Now</Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

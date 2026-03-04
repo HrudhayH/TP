@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-rice-field",
+      "description": "Cinematic rice field at sunrise with golden light",
+      "imageUrl": "https://picsum.photos/seed/vriksa-hero/1920/1080",
+      "imageHint": "rice field sunrise"
+    },
+    {
+      "id": "rice-macro",
+      "description": "Macro photography of premium basmati rice grains",
+      "imageUrl": "https://picsum.photos/seed/rice-grains/800/1000",
+      "imageHint": "rice grains macro"
+    },
+    {
+      "id": "millets-category",
+      "description": "Organic millets in a minimal bowl",
+      "imageUrl": "https://picsum.photos/seed/millets/600/800",
+      "imageHint": "organic millets"
+    },
+    {
+      "id": "pulses-category",
+      "description": "Assorted colorful pulses and lentils",
+      "imageUrl": "https://picsum.photos/seed/pulses/600/800",
+      "imageHint": "lentils pulses"
+    },
+    {
+      "id": "spices-category",
+      "description": "Rich Indian spices arrangement",
+      "imageUrl": "https://picsum.photos/seed/spices/600/800",
+      "imageHint": "indian spices"
+    },
+    {
+      "id": "dry-fruits-category",
+      "description": "Premium assorted dry fruits",
+      "imageUrl": "https://picsum.photos/seed/dryfruits/600/800",
+      "imageHint": "dry fruits"
+    },
+    {
+      "id": "export-logistics",
+      "description": "Modern global logistics and shipping container",
+      "imageUrl": "https://picsum.photos/seed/logistics/1200/800",
+      "imageHint": "shipping logistics"
+    }
+  ]
 }

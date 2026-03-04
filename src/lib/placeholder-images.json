@@ -2,45 +2,45 @@
   "placeholderImages": [
     {
       "id": "hero-rice-field",
-      "description": "Cinematic rice field at sunrise with golden light",
-      "imageUrl": "https://picsum.photos/seed/vriksa-hero/1920/1080",
-      "imageHint": "rice field sunrise"
+      "description": "Cinematic wide shot of golden rice fields at sunrise with soft fog and warm sunlight, featuring a farmer walking through the plantation",
+      "imageUrl": "https://picsum.photos/seed/vriksa-cinematic-hero/1920/1080",
+      "imageHint": "rice fields sunrise"
     },
     {
       "id": "rice-macro",
-      "description": "Macro photography of premium basmati rice grains",
-      "imageUrl": "https://picsum.photos/seed/rice-grains/800/1000",
+      "description": "Exquisite macro photography of long-grain premium basmati rice grains showing texture and purity",
+      "imageUrl": "https://picsum.photos/seed/rice-perfection/800/1000",
       "imageHint": "rice grains macro"
     },
     {
       "id": "millets-category",
-      "description": "Organic millets in a minimal bowl",
-      "imageUrl": "https://picsum.photos/seed/millets/600/800",
-      "imageHint": "organic millets"
+      "description": "Traditional harvest of ancient organic millets in sun-drenched golden agricultural fields",
+      "imageUrl": "https://picsum.photos/seed/millets-harvest/600/800",
+      "imageHint": "millets field"
     },
     {
       "id": "pulses-category",
-      "description": "Assorted colorful pulses and lentils",
-      "imageUrl": "https://picsum.photos/seed/pulses/600/800",
-      "imageHint": "lentils pulses"
+      "description": "Artisanal display of organic pulses and legumes in traditional burlap export sacks",
+      "imageUrl": "https://picsum.photos/seed/pulses-farm/600/800",
+      "imageHint": "pulses harvest"
     },
     {
       "id": "spices-category",
-      "description": "Rich Indian spices arrangement",
-      "imageUrl": "https://picsum.photos/seed/spices/600/800",
+      "description": "Cinematic arrangement of vibrant whole Indian spices in a traditional export warehouse",
+      "imageUrl": "https://picsum.photos/seed/spices-cinematic/600/800",
       "imageHint": "indian spices"
     },
     {
       "id": "dry-fruits-category",
-      "description": "Premium assorted dry fruits",
-      "imageUrl": "https://picsum.photos/seed/dryfruits/600/800",
+      "description": "Premium handpicked dry fruits in a rustic agricultural setting",
+      "imageUrl": "https://picsum.photos/seed/dryfruits-harvest/600/800",
       "imageHint": "dry fruits"
     },
     {
       "id": "export-logistics",
-      "description": "Modern global logistics and shipping container",
-      "imageUrl": "https://picsum.photos/seed/logistics/1200/800",
-      "imageHint": "shipping logistics"
+      "description": "Cinematic view of agricultural export logistics featuring high-quality rice packaging and shipping infrastructure",
+      "imageUrl": "https://picsum.photos/seed/vriksa-logistics/1200/800",
+      "imageHint": "agricultural export"
     }
   ]
 }

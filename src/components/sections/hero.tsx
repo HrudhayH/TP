@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,8 @@ export function Hero() {
           className="object-cover"
           data-ai-hint={heroImage?.imageHint}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-background" />
+        {/* Apple-style subtle gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background" />
       </motion.div>
 
       {/* Content */}
@@ -48,15 +49,15 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-headline text-accent uppercase text-xs md:text-sm tracking-[0.3em]"
           >
-            Since 1984 • Global Agricultural Excellence
+            Nurtured by Nature • Exported with Excellence
           </motion.p>
           <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl text-white leading-[0.9] tracking-tighter">
             Purely Nature.<br />
             <span className="italic font-light">Global reach.</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-light max-w-2xl mx-auto font-body leading-relaxed">
-            Bridging Indian fertile soils with premium international markets. 
-            Experience the standard of Vriksa.
+            Bridging India&apos;s fertile soils with premium international markets. 
+            Experience the gold standard of Vriksa Global.
           </p>
         </div>
 

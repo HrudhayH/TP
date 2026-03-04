@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -85,7 +84,7 @@ export function GlobalPresence() {
                 src={logisticsImage?.imageUrl || ""}
                 alt="Logistics and shipping"
                 fill
-                className="object-cover transition-transform duration-[15s] group-hover:scale-125"
+                className="object-cover transition-transform [transition-duration:15s] group-hover:scale-125"
                 data-ai-hint={logisticsImage?.imageHint}
               />
               <div className="absolute inset-0 bg-accent/5 mix-blend-overlay" />

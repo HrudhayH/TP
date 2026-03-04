@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -65,7 +64,7 @@ export function FeaturedProduct() {
               src={riceImage?.imageUrl || ""}
               alt="Macro rice grains"
               fill
-              className="object-cover transition-transform duration-[20s] group-hover:scale-125"
+              className="object-cover transition-transform [transition-duration:20s] group-hover:scale-125"
               data-ai-hint={riceImage?.imageHint}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

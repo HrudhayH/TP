@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export function FeaturedProduct() {
-  const riceImage = PlaceHolderImages.find(img => img.id === "rice-macro");
+  const featuredImage = PlaceHolderImages.find(img => img.id === "rice-sacks-featured") || PlaceHolderImages.find(img => img.id === "rice-macro");
   useScrollReveal();
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0.3, 0.6], [0.8, 1]);
@@ -61,11 +61,11 @@ export function FeaturedProduct() {
             className="relative aspect-[3/4] md:aspect-square order-1 lg:order-2 rounded-[3rem] overflow-hidden shadow-2xl group"
           >
             <Image
-              src={riceImage?.imageUrl || ""}
-              alt="Macro rice grains"
+              src={featuredImage?.imageUrl || ""}
+              alt="Premium rice export packaging"
               fill
               className="object-cover transition-transform [transition-duration:20s] group-hover:scale-125"
-              data-ai-hint={riceImage?.imageHint}
+              data-ai-hint={featuredImage?.imageHint}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[3rem]" />

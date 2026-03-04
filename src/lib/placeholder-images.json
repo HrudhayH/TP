@@ -2,45 +2,51 @@
   "placeholderImages": [
     {
       "id": "hero-rice-field",
-      "description": "Cinematic wide shot of golden rice fields at sunrise with soft fog and warm sunlight, featuring a farmer walking through the plantation",
-      "imageUrl": "https://picsum.photos/seed/vriksa-cinematic-hero/1920/1080",
-      "imageHint": "rice fields sunrise"
+      "description": "Cinematic wide photograph of golden rice fields at sunrise with soft fog and warm sunlight, premium and natural agricultural landscape",
+      "imageUrl": "https://picsum.photos/seed/vriksa-hero-sunrise/1920/1080",
+      "imageHint": "rice sunrise"
     },
     {
       "id": "rice-macro",
-      "description": "Exquisite macro photography of long-grain premium basmati rice grains showing texture and purity",
-      "imageUrl": "https://picsum.photos/seed/rice-perfection/800/1000",
-      "imageHint": "rice grains macro"
+      "description": "Exquisite macro photography of premium long-grain basmati rice grains showing high-end texture and purity",
+      "imageUrl": "https://images.unsplash.com/photo-1618513965492-badaf6cbdfed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyaWNlJTIwZ3JhaW5zfGVufDB8fHx8MTc3MjUyNjkxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rice grains"
     },
     {
       "id": "millets-category",
-      "description": "Traditional harvest of ancient organic millets in sun-drenched golden agricultural fields",
-      "imageUrl": "https://picsum.photos/seed/millets-harvest/600/800",
-      "imageHint": "millets field"
+      "description": "Close-up of organic ancient millet grains in a traditional harvest setting, natural lighting",
+      "imageUrl": "https://picsum.photos/seed/vriksa-millets/600/800",
+      "imageHint": "millet grains"
     },
     {
       "id": "pulses-category",
-      "description": "Artisanal display of organic pulses and legumes in traditional burlap export sacks",
-      "imageUrl": "https://picsum.photos/seed/pulses-farm/600/800",
-      "imageHint": "pulses harvest"
+      "description": "Artisanal display of protein-rich organic pulses and lentils in rustic ceramic bowls",
+      "imageUrl": "https://picsum.photos/seed/vriksa-pulses/600/800",
+      "imageHint": "organic pulses"
     },
     {
       "id": "spices-category",
-      "description": "Cinematic arrangement of vibrant whole Indian spices in a traditional export warehouse",
-      "imageUrl": "https://picsum.photos/seed/spices-cinematic/600/800",
+      "description": "Cinematic arrangement of vibrant whole Indian spices, capturing the authentic essence of export quality",
+      "imageUrl": "https://picsum.photos/seed/vriksa-spices/600/800",
       "imageHint": "indian spices"
     },
     {
       "id": "dry-fruits-category",
-      "description": "Premium handpicked dry fruits in a rustic agricultural setting",
-      "imageUrl": "https://picsum.photos/seed/dryfruits-harvest/600/800",
+      "description": "Premium assortment of handpicked dry fruits and nuts in a clean, high-end presentation",
+      "imageUrl": "https://picsum.photos/seed/vriksa-dryfruits/600/800",
       "imageHint": "dry fruits"
     },
     {
       "id": "export-logistics",
-      "description": "Cinematic view of agricultural export logistics featuring high-quality rice packaging and shipping infrastructure",
-      "imageUrl": "https://picsum.photos/seed/vriksa-logistics/1200/800",
-      "imageHint": "agricultural export"
+      "description": "Cinematic view of agricultural export logistics featuring premium grain packaging and clean shipping infrastructure",
+      "imageUrl": "https://picsum.photos/seed/vriksa-export-logistics/1200/800",
+      "imageHint": "export logistics"
+    },
+    {
+      "id": "rice-sacks-featured",
+      "description": "High quality photography of traditional burlap export sacks filled with premium rice in a professional warehouse",
+      "imageUrl": "https://picsum.photos/seed/vriksa-featured-sacks/1200/1200",
+      "imageHint": "rice sacks"
     }
   ]
 }
